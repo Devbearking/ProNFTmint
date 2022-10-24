@@ -2,7 +2,7 @@
 ## Usage
 
 ```bash
-git clone <this-repo>
+
 npm install
 
 # terminal 1
