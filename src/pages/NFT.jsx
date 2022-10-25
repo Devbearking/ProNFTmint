@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ethers } from 'ethers';
 import WatchingEyes from '../artifacts/contracts/MyNFT.sol/WatchingEyes.json';
 
-const contractAddress = '0xBe04B316A37DCdB3199D307893a9522D1041F835';
+const contractAddress = '0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA';
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 

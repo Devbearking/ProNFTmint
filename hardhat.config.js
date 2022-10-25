@@ -16,7 +16,7 @@ module.exports = {
   networks: {
     hardhat: {},
     matic: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/gjoDlqGdfBIG1jB50Deavh2qpK9bICSQ",
+      url: "https://polygon-mumbai.g.alchemy.com/v2/dMJFwvA0cgLkBLjuyjPWAsLBmOveZ6pZ",
       accounts: ["de9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"]
     }
   },
