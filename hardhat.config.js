@@ -17,7 +17,7 @@ module.exports = {
     hardhat: {},
     matic: {
       url: "https://polygon-mumbai.g.alchemy.com/v2/gjoDlqGdfBIG1jB50Deavh2qpK9bICSQ",
-      accounts: ["f214f2b2cd398c806f84e317254e0f0b801d0643303237d97a22a48e01628897"]
+      accounts: ["de9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"]
     }
   },
 };
