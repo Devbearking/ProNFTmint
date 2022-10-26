@@ -7,7 +7,7 @@ describe("MyNFT", function () {
     const watchingEyes = await WatchingEyes.deploy();
     await watchingEyes.deployed();
 
-    const recipient = '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199';
+    const recipient = '0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA';
     const metadataURI = 'cid/test.png';
 
     let balance = await watchingEyes.balanceOf(recipient);

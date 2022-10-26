@@ -17,10 +17,10 @@ module.exports = {
     hardhat: {},
     matic: {
       url: "https://polygon-mumbai.g.alchemy.com/v2/dMJFwvA0cgLkBLjuyjPWAsLBmOveZ6pZ",
-      // accounts: ["de9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"]
-      accounts: ["MATIC_PRIVATE_KEY"],
-      gas: 2100000,
-      gasPrice: 8000000000
+      accounts: ["de9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"],
+      // accounts: ["MATIC_PRIVATE_KEY"],
+      // gas: 2100000,
+      // gasPrice: 8000000000
     }
   },
 };
