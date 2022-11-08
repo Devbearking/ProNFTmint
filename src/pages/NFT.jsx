@@ -1,12 +1,14 @@
 import WalletBalance from '../components/WalletBalance';
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Placeholder from "./placeholder.png"
 
 
 
 import { ethers } from 'ethers';
 import WatchingEyes from '../artifacts/contracts/MyNFT.sol/WatchingEyes.json';
 
+// The contract after deployment on Polygon Mumbai
 const contractAddress = '0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA';
 
 
@@ -35,7 +37,7 @@ function Home() {
   return (
     <div>
       <WalletBalance />
-      <div class="container mt-lg-8 mt-12">
+      <div className="container mt-lg-8 mt-12">
         <div className="row">
           {Array(totalMinted + 1)
             .fill(0)
@@ -85,7 +87,8 @@ function NFTImage({ tokenId, getCount }) {
   }
   return (
     <div className="card bg-primary mb-3" style={{ width: '18rem' }}>
-      <img className="card-img-top" alt='#' src={isMinted ? imageURI : 'https://gateway.pinata.cloud/ipfs/Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5/placeholder.png'}></img>
+      <img className="card-img-top" alt='#' src={isMinted ? imageURI : Placeholder }></img>
+      {/* 'https://gateway.pinata.cloud/ipfs/Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5/placeholder.png' */}
       <div className="card-body">
         <h5 className="card-title">ID #{tokenId}</h5>
         {!isMinted ? (

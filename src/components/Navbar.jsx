@@ -4,23 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
-// function ConnectToWallet() {
-//   return (
-//    document.getElementById('wallet').addEventListener('click', function(){
-//   if(window.ethereum){
-//     window.ethereum.request({method:'eth_requestAccounts'})
-//   .then(res=>{
-//           // Return the address of the wallet
-//           console.log(res)
-//   })
-//   }else{
-//     alert("install metamask extension!!")
-//   }
-// })
-
-//   )
-// }
-
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -36,7 +19,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <img
           id="logo-img"
-          src="https://i.ibb.co/rQXJHRK/Logo-img.png"
+          src="https://i.ibb.co/pntTpP7/Untitled-design-5-1.webp"
           alt="logo"
         />
         <a className="navbar-brand mb-0 h1" href="/">
@@ -55,9 +38,7 @@ function Navbar() {
           {navbarOpen ? (
             <MdClose style={{ color: "#fff", width: "40px", height: "40px" }} />
           ) : (
-            <FiMenu
-              style={{ color: "#fff", width: "40px", height: "40px" }}
-            />
+            <FiMenu style={{ color: "#fff", width: "40px", height: "40px" }} />
           )}
         </button>
         <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
@@ -108,7 +89,6 @@ function Navbar() {
           </li>
         </ul>
 
-      
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item me-4">
@@ -132,15 +112,7 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item me-4">
-              {/* <button
-                onClick={ConnectToWallet}
-                className="nav-link"
-                id="wallet"
-              >
-                Connect Wallet
-              </button> */}
-            </li>
+            <li className="nav-item me-4"></li>
           </ul>
         </div>
       </nav>

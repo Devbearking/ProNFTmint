@@ -8,14 +8,14 @@ function Footer() {
   return (
     <div className="footer">
     <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
       </div>
       <footer id="footer">
-        <div class="icons-wrapper">
+        <div className="icons-wrapper">
           <a className="fa fa-linkedin icon" href="https://www.linkedin.com/in/deyvid-razsukanov-a2669a22a/" target="_blank" rel="noreferrer">
-            <FaLinkedin style={{ fontSize: "30px" }} onClick />
+            <FaLinkedin style={{ fontSize: "30px" }} />
           </a>
           <a className="fa fa-github icon" href="https://github.com/Devbearking" target="_blank" rel="noreferrer">
             <FaGithub style={{ fontSize: "30px" }} />
@@ -24,7 +24,7 @@ function Footer() {
             <FaTwitter style={{ fontSize: "30px" }} />
           </a>
         </div> 
-        <p class="footer-p">© Copyright ProNFT 2022</p>
+        <p className="footer-p">© Copyright ProNFT 2022</p>
         
       </footer>
     </div>

@@ -21,11 +21,6 @@ function App() {
           <Route path="nft" element={<NFT />} />
         </Route>
       </Routes>
-      {/* <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-      </div> */}
     </BrowserRouter>)
   } else {
     return <Install />

@@ -1,8 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Spline3D from '../components/Spline';
-
-
 
 function Home() {
     return (
@@ -15,7 +12,6 @@ function Home() {
                 built to enable scalable, user-friendly apps for the world.</h2>
             </div>
             <div className="col-lg-6">
-            <Spline3D/>
             </div>
           </div>
         </div>
