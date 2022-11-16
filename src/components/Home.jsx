@@ -1,5 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Homescreen from "./Homescreen.png";
+import Spline3D from "./Spline"
 
 function Home() {
     return (
@@ -12,6 +14,8 @@ function Home() {
                 built to enable scalable, user-friendly apps for the world.</h2>
             </div>
             <div className="col-lg-6">
+            text
+            <Spline3D/>
             </div>
           </div>
         </div>
