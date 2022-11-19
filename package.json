@@ -1,7 +1,6 @@
 {
   "name": "myapptwo",
   "version": "0.1.0",
-  
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -14,16 +13,19 @@
     "@testing-library/user-event": "^13.5.0",
     "alchemy-sdk": "^2.1.1",
     "babel-plugin-macros": "^3.1.0",
-    "bootstrap": "^5.2.1",
+    "bootstrap": "^5.2.2",
     "bulma": "^0.8.2",
     "eslint-plugin-react-hooks": "^5.0.0-next-65e32e58b-20221019",
     "ethers": "^5.6.9",
     "node": "^18.10.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-interactive-blob": "^0.0.1",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "sass": "^1.56.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

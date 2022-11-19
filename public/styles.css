@@ -5,7 +5,7 @@ body {
   overflow: auto;
   background: linear-gradient(
     315deg,
-    rgb(0, 0, 0) 3%,
+    rgb(255, 255, 255) 3%,
     rgb(149, 0, 255) 38%,
     rgba(28, 0, 184, 0.713) 68%,
     rgb(0, 255, 166) 98%
@@ -423,15 +423,13 @@ body,
   text-align: center;
   padding-top: 50px;
 }
-.footer{
+.footer {
   padding-top: 100px;
 }
 .footer-icon {
   margin: 20px 8px;
-  
 }
 .footer-p {
-  
   color: #ffffff83;
 }
 .myName {
@@ -442,7 +440,7 @@ body,
   text-align: center;
 }
 .card {
-  background-color: #ffffff00;
+  color: #ffffff;
 }
 @media screen and (max-width: 850px) {
   .input-control {
@@ -464,10 +462,14 @@ body,
 
 h1 {
   font-family: "Montserrat Alternates", sans-serif;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgba(56, 56, 56, 0.546);
+  -webkit-text-stroke-width: 2px;
 }
 h2 {
   font-family: "Montserrat Alternates", sans-serif;
 }
+
 h4 {
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -511,7 +513,7 @@ a {
 .menuNav.showMenu {
   visibility: visible;
   width: 100%;
-  animation:slide-left 1s cubic-bezier(.25,.46,.45,.94) both
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 li {
@@ -533,4 +535,55 @@ li {
   padding: 1rem;
 }
 
- @keyframes slide-left{0%{transform:translateX(500px)}50%{transform:translateX(-80px)}}
+@keyframes slide-left {
+  0% {
+    transform: translateX(500px);
+  }
+  50% {
+    transform: translateX(-80px);
+  }
+}
+
+.HomeImg {
+  width: 100%;
+  position: relative;
+}
+
+.empty {
+  position: relative;
+  align-items: center;
+  margin: 100px 0px;
+  right: 150px;
+  width: 500%;
+  height: 5px;
+  background-color: rgba(75, 75, 75, 0.598);
+}
+
+.PhoneImg {
+  position: relative;
+  width: 1000px;
+  right: 20px;
+  bottom: 100px;
+  margin-bottom: 0px;
+  z-index: -1;
+
+}
+
+.Carousel-box {
+  top: 100px;
+  border: rgb(41, 41, 41);
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 20px;
+  width: 500px;
+  margin-top: 100px;
+}
+.HomeMintBtn {
+  position: relative;
+  background-color: #ffffff00;
+  width: 200px;
+  top: 1240px;
+  right: 310px;
+
+}
+

@@ -14,6 +14,12 @@ function Navbar() {
     setNavbarOpen(false);
   };
 
+  async function Alert() {
+    const Message = "Please Connect to Polygon Mumbai testnet Wallet!";
+    alert(Message)
+
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark">
@@ -97,7 +103,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item me-4">
-              <Link to="/nft" className="nav-link">
+              <Link to="/nft" className="nav-link" onClick={Alert}>
                 NFT
               </Link>
             </li>

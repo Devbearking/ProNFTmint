@@ -2,11 +2,10 @@ import WalletBalance from '../components/WalletBalance';
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Placeholder from "./placeholder.png"
-
-
-
 import { ethers } from 'ethers';
 import WatchingEyes from '../artifacts/contracts/MyNFT.sol/WatchingEyes.json';
+
+
 
 // The contract after deployment on Polygon Mumbai
 const contractAddress = '0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA';
@@ -22,6 +21,8 @@ const contract = new ethers.Contract(contractAddress, WatchingEyes.abi, signer);
 
 
 function Home() {
+
+  
 
   const [totalMinted, setTotalMinted] = useState(0);
   useEffect(() => {
@@ -86,7 +87,7 @@ function NFTImage({ tokenId, getCount }) {
     alert(uri);
   }
   return (
-    <div className="card bg-primary mb-3" style={{ width: '18rem' }}>
+    <div className="card bg-dark bg-gradient mb-3" style={{ width: '18rem' }}>
       <img className="card-img-top" alt='#' src={isMinted ? imageURI : Placeholder }></img>
       {/* 'https://gateway.pinata.cloud/ipfs/Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5/placeholder.png' */}
       <div className="card-body">
