@@ -44,7 +44,7 @@ function Contacts() {
           </div>
           <div className="submit-btn">
             <a href="mailto:drazsukanov93@gmail.com" className="main-btn">
-              <span className="btn-text">SEND</span>
+              <h5 className="btn-text mt-2">SEND</h5>
               <span className="btn-icon"><FaEnvelope style={{fontSize: '20px'}}/></span>
             </a>
           </div>

@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./Carousel";
 import HomeImg from "../images/HomeImg.png";
 import { Badge, Button } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import PhoneImg from "../images/PhoneImg.png";
 
@@ -40,6 +39,9 @@ function Home() {
           <div className="col-6">
             <Carousel />
           </div>
+        </div>
+        <div className="row">
+          <div className="text-center">PUT SOMETHING HERE!</div>
         </div>
       </div>
     </div>
