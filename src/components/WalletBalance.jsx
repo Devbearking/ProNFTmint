@@ -42,7 +42,7 @@ function WalletBalance() {
           >
             Show My Balance
           </button>
-          <div className="btn btn-secondary btn-lg mb-5 mt-3P">
+          <div className="btn btn-secondary btn-lg mb-5 mt-3">
             <button onClick={ConnectToWallet} className="nav-link" id="wallet">
               Connect Wallet
             </button>

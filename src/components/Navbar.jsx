@@ -29,7 +29,7 @@ function Navbar() {
           alt="logo"
         />
         <a className="navbar-brand mb-0 h1" href="/">
-          ProNFT
+          ProMint
         </a>
         <button
           onClick={handleToggle}
