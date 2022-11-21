@@ -1,4 +1,6 @@
-const Install = () => {
+import React from "react";
+
+function Install() {
     return (
       <div>
         <h3>Follow the link to install 👇🏼</h3>
