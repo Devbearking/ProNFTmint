@@ -1,4 +1,4 @@
-import Install from './components/Install';
+
 import Home from './components/Home';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,7 +10,6 @@ import "./App.css";
 
 
 function App() {
-  if (window.ethereum) {
     return(
     <BrowserRouter>
       <Routes>
@@ -22,9 +21,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>)
-  } else {
-    return <Install />
-  }
 }
 
 export default App;
