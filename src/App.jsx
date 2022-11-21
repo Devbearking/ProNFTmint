@@ -1,7 +1,6 @@
-
-import Home from './components/Home';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
 import Layout from "./pages/Layout";
 import Contact from "./pages/Contacts";
 import About from "./pages/About"
@@ -21,6 +20,5 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>)
-}
-
+  }
 export default App;

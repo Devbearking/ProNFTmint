@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./Carousel";
 import HomeImg from "../images/HomeImg.png";
-import { Badge, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PhoneImg from "../images/PhoneImg.png";
 
@@ -20,7 +20,7 @@ function Home() {
           </h2>
         </div>
         <div className="col-lg-6">
-          <img className="HomeImg" src={HomeImg} />
+          <img className="HomeImg" src={HomeImg} alt='HomeImg' />
           <li className="HomeMintBtn">
             <Link to="/nft" className="nav-link">
               <Button variant="transparent"></Button>
@@ -34,7 +34,7 @@ function Home() {
       <div className="container mt-lg mt-12 PhoneCard">
         <div className="row mt-3">
           <div className="col-6">
-            <img className="PhoneImg" src={PhoneImg} />
+            <img className="PhoneImg" src={PhoneImg} alt="PhoneImg"/>
           </div>
           <div className="col-6">
             <Carousel />

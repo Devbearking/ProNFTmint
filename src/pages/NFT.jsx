@@ -1,15 +1,12 @@
-import WalletBalance from '../components/WalletBalance';
-import React, { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Placeholder from "./placeholder.png"
-import { ethers } from 'ethers';
-import WatchingEyes from '../artifacts/contracts/MyNFT.sol/WatchingEyes.json';
-
-
+import WalletBalance from "../components/WalletBalance";
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Placeholder from "./placeholder.png";
+import { ethers } from "ethers";
+import WatchingEyes from "../artifacts/contracts/MyNFT.sol/WatchingEyes.json";
 
 // The contract after deployment on Polygon Mumbai
-const contractAddress = '0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA';
-
+const contractAddress = "0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA";
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
@@ -19,11 +16,7 @@ const signer = provider.getSigner();
 // get the smart contract
 const contract = new ethers.Contract(contractAddress, WatchingEyes.abi, signer);
 
-
 function Home() {
-
-  
-
   const [totalMinted, setTotalMinted] = useState(0);
   useEffect(() => {
     getCount();
@@ -54,7 +47,7 @@ function Home() {
 }
 
 function NFTImage({ tokenId, getCount }) {
-  const contentId = 'Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5';
+  const contentId = "Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5";
   const metadataURI = `${contentId}/${tokenId}.json`;
   const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
   // const imageURI = `../../img/${tokenId}.png`;
@@ -66,7 +59,7 @@ function NFTImage({ tokenId, getCount }) {
 
   const getMintedStatus = async () => {
     const result = await contract.isContentOwned(metadataURI);
-    console.log(result)
+    console.log(result);
     setIsMinted(result);
   };
 
@@ -74,7 +67,7 @@ function NFTImage({ tokenId, getCount }) {
     const connection = contract.connect(signer);
     const addr = connection.address;
     const result = await contract.payToMint(addr, metadataURI, {
-      value: ethers.utils.parseEther('0.05'),
+      value: ethers.utils.parseEther("0.05"),
     });
 
     await result.wait();
@@ -87,8 +80,12 @@ function NFTImage({ tokenId, getCount }) {
     alert(uri);
   }
   return (
-    <div className="card bg-dark bg-gradient mb-3" style={{ width: '18rem' }}>
-      <img className="card-img-top" alt='#' src={isMinted ? imageURI : Placeholder }></img>
+    <div className="card bg-dark bg-gradient mb-3" style={{ width: "18rem" }}>
+      <img
+        className="card-img-top"
+        alt="#"
+        src={isMinted ? imageURI : Placeholder}
+      ></img>
       {/* 'https://gateway.pinata.cloud/ipfs/Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5/placeholder.png' */}
       <div className="card-body">
         <h5 className="card-title">ID #{tokenId}</h5>
