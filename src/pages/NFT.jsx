@@ -4,17 +4,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Placeholder from "./placeholder.png";
 import { ethers } from "ethers";
 import WatchingEyes from "../artifacts/contracts/MyNFT.sol/WatchingEyes.json";
+import LoadingSpinner from "../components/Loading";
+
 
 // The contract after deployment on Polygon Mumbai
 const contractAddress = "0xF810A6561BCEF7a74A11B0dC9A1A56F4AE01A8CA";
 
-const provider = new ethers.providers.Web3Provider(window.ethereum);
+// const provider = new ethers.providers.Web3Provider(window.ethereum);
+const provider =  ((window.ethereum != undefined) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
+console.log(provider)
 
 // get the end user
+// const signer = (provider == ethers.providers.FallbackProvider) ? provider.getSigner() : ethers.providers.getDefaultProvider;
 const signer = provider.getSigner();
+console.log(signer)
 
 // get the smart contract
 const contract = new ethers.Contract(contractAddress, WatchingEyes.abi, signer);
+
+
 
 function Home() {
   const [totalMinted, setTotalMinted] = useState(0);
@@ -36,7 +44,7 @@ function Home() {
           {Array(totalMinted + 1)
             .fill(0)
             .map((_, i) => (
-              <div key={i} className="col-sm">
+              <div key={i} className="col-lg-3 NftCard">
                 <NFTImage tokenId={i} getCount={getCount} />
               </div>
             ))}
@@ -73,12 +81,23 @@ function NFTImage({ tokenId, getCount }) {
     await result.wait();
     getMintedStatus();
     getCount();
+    setLoading(false);
   };
 
   async function getURI() {
     const uri = await contract.tokenURI(tokenId);
     alert(uri);
   }
+
+  
+   const [loading, setLoading] = useState(false)
+
+   if (loading == true) {
+    return(
+      <LoadingSpinner/>
+    )
+   }
+
   return (
     <div className="card bg-dark bg-gradient mb-3" style={{ width: "18rem" }}>
       <img
@@ -88,9 +107,12 @@ function NFTImage({ tokenId, getCount }) {
       ></img>
       {/* 'https://gateway.pinata.cloud/ipfs/Qmd2dsyARvvC3tGHeEvaQfJH7hz1jHAcEwbSPXDhv2WNz5/placeholder.png' */}
       <div className="card-body">
-        <h5 className="card-title">ID #{tokenId}</h5>
+        <h5 className="card-title text-white">ID #{tokenId}</h5>
         {!isMinted ? (
-          <button className="btn btn-dark" onClick={mintToken}>
+          <button className="btn btn-dark" onClick={() => {
+            mintToken();
+            setLoading(true);
+            }}>
             Mint
           </button>
         ) : (

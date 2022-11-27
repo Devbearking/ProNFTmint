@@ -6,6 +6,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@metamask/detect-provider": "^2.0.0",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.110",
     "@testing-library/jest-dom": "^5.16.5",

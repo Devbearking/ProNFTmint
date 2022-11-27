@@ -464,6 +464,12 @@ body,
   .HomeImg {
     margin-top: 60px;
   }
+  .NftCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
   .PhoneImg {
     max-width: 650px;
     left: -60px;
@@ -487,6 +493,12 @@ body,
     display: none !important;
   }
   .carousel-control-next {
+    display: none !important;
+  }
+  .MyImg {
+    display: none !important;
+  }
+  hr {
     display: none !important;
   }
 }
@@ -592,12 +604,19 @@ li {
   position: relative;
 }
 
-.empty {
+hr {
   position: relative;
   align-items: center;
-  margin: 100px 0px;
-  right: 150px;
-  width: 500%;
+  margin: 150px 0px !important;
+  height: 5px;
+  background-color: rgba(75, 75, 75, 0.598);
+}
+
+.hr-2 {
+   position: relative;
+  align-items: center;
+  margin: 150px 0px;
+  bottom: 400px;
   height: 5px;
   background-color: rgba(75, 75, 75, 0.598);
 }
@@ -622,7 +641,7 @@ li {
 }
 .HomeMintBtn {
   position: absolute;
-  top: 1643px;
+  top: 1743px;
   left: 433px;
   background-color: #ffffff00;
   border-radius: 50px;
@@ -655,4 +674,45 @@ li {
   -webkit-text-stroke-color: rgb(185, 185, 185);
   -webkit-text-stroke-width: 1px;
   font-size: 3.5rem;
+}
+
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+.btm-home {
+  position: relative;
+  bottom: 200px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 20px;
+  padding: 20px;
+}
+.MyImg {
+  position: relative;
+  bottom: 400px;
+  width: 1200px;
+  left: 30px;
+  border-radius: 20px;
 }

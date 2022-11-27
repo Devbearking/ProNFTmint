@@ -5,6 +5,7 @@ import HomeImg from "../images/HomeImg.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PhoneImg from "../images/PhoneImg.png";
+import MyImg from "../images/MyImg.png"
 
 function Home() {
   return (
@@ -20,7 +21,7 @@ function Home() {
           </h2>
         </div>
         <div className="col-lg-6">
-          <img className="HomeImg" src={HomeImg} alt='HomeImg' />
+          <img className="HomeImg" src={HomeImg} alt="HomeImg" />
           <li className="HomeMintBtn">
             <Link to="/nft" className="nav-link">
               <Button variant="transparent"></Button>
@@ -28,21 +29,36 @@ function Home() {
           </li>
         </div>
       </div>
-      <div className="empty">
-        <div></div>
-      </div>
+      <hr></hr>
       <div className="container mt-lg mt-12 PhoneCard">
         <div className="row mt-3">
           <div className="col-6">
-            <img className="PhoneImg" src={PhoneImg} alt="PhoneImg"/>
+            <img className="PhoneImg" src={PhoneImg} alt="PhoneImg" />
           </div>
           <div className="col-6">
             <Carousel />
           </div>
         </div>
-        <div className="row">
-          <div className="text-center">PUT SOMETHING HERE!</div>
+        <hr className="hr-2"></hr>
+        <div className="myimg-container">
+          <img className="MyImg" src={MyImg} alt="MyImg"/>
         </div>
+          <div className="text-center btm-home text-white">
+            <h1>Let's get in touch</h1>
+            <p>
+              Connect with our Mint Blockchain Solutions team to start minting,
+              distributing, selling, and exchanging NFTs with your online
+              community and consumers. Get in touch
+            </p>
+            <Button>
+              <li className="nav-item me-1">
+                <Link to="/contacts" className="nav-link">
+                  Let's Connect
+                </Link>
+              </li>
+            </Button>
+          </div>
+        
       </div>
     </div>
   );
